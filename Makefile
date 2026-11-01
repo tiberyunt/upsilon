@@ -159,18 +159,18 @@ kotltos: kotltos-tape kotltos-disk
 # GNU cross tools are optional and built independently of the native tools.
 .PHONY: gnu-toolchain gnu-test gnu-demo
 gnu-toolchain: $(TOOL)
-	$(PYTHON) $(GNU_DIR)/build.py
+	$(PYTHON) $(GNU_DIR)/scripts/build.py
 gnu-test: $(TOOL) dos-image
 	@test -x $(GNU_DIR)/install/bin/upsilon-unknown-elf-gcc || { echo "Run make gnu-toolchain first."; exit 1; }
-	$(PYTHON) $(GNU_DIR)/test_toolchain.py
+	$(PYTHON) $(GNU_DIR)/tests/test_toolchain.py
 gnu-demo: $(TOOL)
-	$(PYTHON) $(GNU_DIR)/build.py runtime
+	$(PYTHON) $(GNU_DIR)/scripts/build.py runtime
 	$(TOOL) run $(GNU_DIR)/out/hello.bin --binary --origin 0x200000 --memory 16777216 --serial
 
 .PHONY: gnu-kotltos-demo
 gnu-kotltos-demo: $(TOOL) dos-image
-	$(PYTHON) $(GNU_DIR)/build.py runtime
-	$(PYTHON) $(GNU_DIR)/package_demo.py
+	$(PYTHON) $(GNU_DIR)/scripts/build.py runtime
+	$(PYTHON) $(GNU_DIR)/scripts/package_demo.py
 	$(TOOL) -m 16 -t $(GNU_DIR)/out/gcc-demo.tap --max-steps 100000000
 
 # Host platform checks do not require downloading NetBSD sources.
@@ -180,8 +180,8 @@ $(BUILD)/test_boot-sanitize: tests/test_boot.c $(CORE) $(HEADERS) | $(BUILD)
 	$(CC) $(CPPFLAGS) $(SANFLAGS) -Isimulator tests/test_boot.c $(CORE) $(LDLIBS) -o $@
 .PHONY: netbsd-bootstrap netbsd-demo netbsd-test
 netbsd-bootstrap: $(TOOL)
-	$(PYTHON) $(NETBSD_DIR)/build.py
+	$(PYTHON) $(NETBSD_DIR)/scripts/build.py
 netbsd-demo: netbsd-bootstrap
 	$(TOOL) -m 32 --kernel $(NETBSD_DIR)/build/bootstrap.elf --bootargs '-s'
 netbsd-test: netbsd-bootstrap test-c
-	$(PYTHON) $(NETBSD_DIR)/test_bootstrap.py
+	$(PYTHON) $(NETBSD_DIR)/tests/test_bootstrap.py
