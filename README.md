@@ -60,8 +60,8 @@ See [KotlTOS documentation](dos/README.md) for FORMAT, SYSCOPY and its tools.
 
 The GNU ports and NetBSD port live in separate sibling repositories:
 
-- [upsilon-gnu](https://github.com/tiberyunt/upsilon-gnu/README.md): GCC/Binutils overlays, reproducible builds and runtime.
-- [upsilon-netbsd](https://github.com/tiberyunt/upsilon-netbsd/README.md): NetBSD MD sources and bootstrap probe.
+- [upsilon-gnu](https://github.com/tiberyunt/upsilon-gnu/): GCC/Binutils overlays, reproducible builds and runtime.
+- [upsilon-netbsd](https://github.com/tiberyunt/upsilon-netbsd/): NetBSD MD sources and bootstrap probe.
 
 They are not vendored or submodules in this repository. Optional convenience
 commands are `make gnu-test` and `make netbsd-test`. Override `GNU_DIR` and
