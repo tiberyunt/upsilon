@@ -1,0 +1,14 @@
+help
+boot disk0
+edit hello.s
+start: MOV.q #42, R0
+HALT
+.save
+asm hello.s
+files
+basic
+PRINT "Hello from the firmware"
+PRINT 10+20-3
+BYE
+type hello.s
+shutdown
