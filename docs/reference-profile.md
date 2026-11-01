@@ -1,5 +1,7 @@
 # Kotl Upsilon implementation profile v0.4
 
+[Documentation license: CC BY-NC 4.0](LICENSE.md)
+
 The production C tools and native ROM assembler follow the supplied [v0.4
 specification](0.4.md), with section 25 taking precedence, and the
 [assembly programmer’s guide](Kotl%20Upsilon%20Assembly%20Programmer%E2%80%99s%20Guide.md).

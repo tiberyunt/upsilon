@@ -1,5 +1,7 @@
 # Kotl Upsilon — Draft Specification v0.4
 
+[Documentation license: CC BY-NC 4.0](LICENSE.md)
+
 Working draft. Everything marked **(provisional)** is a proposed default to be confirmed or changed before the assembler and simulator are written.
 
 ## 1. Goals and conventions

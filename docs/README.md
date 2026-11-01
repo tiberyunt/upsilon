@@ -1,5 +1,7 @@
 # Current documentation
 
+[Documentation license: CC BY-NC 4.0](LICENSE.md)
+
 - [ISA v0.4](isa.md): architecture specification.
 - [Assembly programmer's guide](programmers-guide.md): source syntax, calling convention and examples.
 - [Implementation profile](reference-profile.md): supported encodings, devices and current limitations.

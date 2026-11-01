@@ -1,5 +1,7 @@
 # Kotl Upsilon Assembly Programmer’s Guide
 
+[Documentation license: CC BY-NC 4.0](LICENSE.md)
+
 Oct 31, 2026 · @tiberiu
 
 This guide shows how to write Kotl Upsilon assembly: the syntax, the addressing modes, the instructions you will use every day, the calling convention, and the idioms that keep code small. It follows Draft Specification v0.4; where the two differ, the specification wins. Directive names and a few operand spellings (absolute and memory-indirect addresses, two-size conversions) are assumptions, so adjust them to match your assembler.

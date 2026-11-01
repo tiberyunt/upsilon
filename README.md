@@ -74,3 +74,9 @@ The NetBSD port is still a bootstrap probe, not a complete kernel/userland.
 Git excludes build output, compiled objects/executables, tape reels, disk
 images, locks and caches. Keep local saved media outside version control.
 Only current documentation is included; older drafts are not part of this repo.
+
+## Licensing
+
+The software is licensed under the [GNU GPL v3](LICENSE).
+Except where otherwise noted, original documents in `docs/` are licensed under
+[CC BY-NC 4.0](docs/LICENSE.md).
